@@ -14,9 +14,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.PastOrPresent;
-import javax.validation.constraints.Pattern;
 import java.io.Serializable;
-import java.sql.Blob;
 import java.util.Date;
 
 @Entity
@@ -57,7 +55,7 @@ public class BankBranch implements Serializable {
     private String branchManager;
 
     @Column(name = "STATUS")
-    @IsValidStatus
+    @IsValidStatus(listOfValidStatus = {"Active", "InActive", "NA"})
     private String status;
 
     @DateTimeFormat(pattern = "dd-MMM-yyyy")

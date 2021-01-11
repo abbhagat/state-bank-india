@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 @Component
-public class WebAppConfigAdapter extends WebMvcConfigurationSupport {
+public class WebMvcConfigSupport extends WebMvcConfigurationSupport {
 
     @Autowired
     private MaintenanceInterceptor interceptor;

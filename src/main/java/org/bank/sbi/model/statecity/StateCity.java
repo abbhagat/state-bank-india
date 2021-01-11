@@ -21,7 +21,7 @@ import java.util.Date;
 @Table(name = "STATE_CITY")
 @EntityListeners(AuditingEntityListener.class)
 //@JsonPropertyOrder({"stateCityID", "state", "city_name", "xml"}) // Order in which the JSON Response is created
-//@JsonIgnoreProperties({"stateCityID"}) // stateCityID will no be a part of JSOn Response Body
+//@JsonIgnoreProperties({"stateCityID"}) // stateCityID will no be a part of JSON Response Body
 //@JsonInclude(JsonInclude.Include.NON_NULL) null values will not be included in JSON Response
 public class StateCity implements Serializable {
 
