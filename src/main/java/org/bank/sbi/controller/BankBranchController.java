@@ -34,6 +34,7 @@ public class BankBranchController {
     @InitBinder
     public void initBinder(WebDataBinder binder, WebRequest webRequest) {
         binder.setAutoGrowCollectionLimit(500);
+        //binder.setDisallowedFields("branchName");
         int i = 0;
         while (true) {
             if (null != webRequest.getParameter("bankBranchList[" + i + "].phoneNumber")) {
