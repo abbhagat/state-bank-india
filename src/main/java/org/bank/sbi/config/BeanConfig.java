@@ -15,9 +15,6 @@ public class BeanConfig {
 
     @Bean
     public SessionFactory getSessionFactory() {
-        if (null == entityManagerFactory.unwrap(SessionFactory.class)) {
-            throw new NullPointerException("Session Factory is not a hibernate factory");
-        }
         return entityManagerFactory.unwrap(SessionFactory.class);
     }
 }
